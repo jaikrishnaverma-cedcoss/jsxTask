@@ -32,13 +32,13 @@ const Prime=()=>{
 }
 // Q3. Make an array storing names of cities, 
 // then print them as unordered list in ascending order using arrow function and map
-let city=["gorakhpur","Lucknow","Varanasi","Delhi","Maharajganj"];
+let city=["Bengaluru","Mengaluru","Balari","Vijayapura","Belagavi","Chikkamagaluru","Kalaburagi","Mysuru","Hosapete","Sivarmogga","Hubballi","Tumakuru"];
 //const sortedAsc = new Map([...city].sort((a, b) => (a > b ? 1 : -1)));
-city=city.sort((a, b) => a > b ? 1 : -1)
+city=city.sort((a, b) => a > b ? 1 : -1);
+const startsWithB = city.filter((country) => country.startsWith("B"));
 root.render(
 <div>
-<h1>{fact(12)}</h1>
-
+<h1>{`Factorial of (5) is: ${fact(5)}`}</h1>
 <h1>Prime No. between 1 to 100: {Prime()}</h1>
 <ul>
 {city.map(item => {
@@ -49,6 +49,17 @@ root.render(
   )
 })}
 </ul>
+<h1>City Name Start With B</h1>
+<ul>
+{startsWithB.map(item => {
+  return (
+    <li>
+      {item} 
+    </li>
+  )
+})}
+</ul>
+
 </div>
 );
 
